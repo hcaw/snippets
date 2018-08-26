@@ -1,7 +1,11 @@
-import json
+# Prints information on all open tabs in brave. Only works in MacOS.
+
+import json, os
 from pprint import pprint
 
-all_windows = json.load(open("/Users/harrywright/Library/Application Support/brave/session-store-1"))['perWindowState']
+user_name = os.environ.get('USER')
+
+all_windows = json.load(open("/Users/" + user_name + "/Library/Application Support/brave/session-store-1"))['perWindowState']
 
 for i, window in enumerate(all_windows):
 	print("Window: ", i)
