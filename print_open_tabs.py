@@ -1,7 +1,6 @@
 # Prints information on all open tabs in brave. Only works in MacOS.
 
 import json, os
-from pprint import pprint
 
 user_name = os.environ.get('USER')
 
